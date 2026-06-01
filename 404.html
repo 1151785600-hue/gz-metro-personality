@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    var seg = location.pathname.replace(/\/+$/, '');
+    var path = seg + (location.search || '');
+    if (seg && seg !== '/gz-metro-personality') {
+      sessionStorage.redirect = path;
+    }
+    location.replace('/gz-metro-personality/' + (location.search || ''));
+  </script>
+</head>
+<body>Redirecting...</body>
+</html>
